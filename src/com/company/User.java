@@ -26,8 +26,8 @@ public class User extends Account {
 
             switch (option) {
                 case 1 -> {
-                    System.out.println("Enter keywords of the product, please (id / kitchen / type " +
-                            "/ color / print / origin):");
+                    System.out.println("Enter keywords of the product, please (id / name " +
+                            "/ color / print / length / material):");
                     String keywordsLine = in.nextLine();
 
                     String[] keywords = keywordsLine.split(" ");

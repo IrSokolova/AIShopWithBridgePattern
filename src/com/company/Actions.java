@@ -1,7 +1,7 @@
 package com.company;
 
 public class Actions {
-    private final Product product;
+    private Product product;
 
     Actions(Product product) {
         this.product = product;
@@ -36,4 +36,6 @@ public class Actions {
     public Product getProduct() {
         return product;
     }
+
+    public void setProduct(Product product){this.product = product;}
 }
