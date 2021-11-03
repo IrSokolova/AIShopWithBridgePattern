@@ -33,6 +33,10 @@ public class Actions {
         }
     }
 
+    void changeSize(int size){
+        this.product.setSize(size);
+    }
+
     public Product getProduct() {
         return product;
     }

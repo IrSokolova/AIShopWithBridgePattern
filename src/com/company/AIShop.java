@@ -13,13 +13,13 @@ public class AIShop {
 
     public void fillTheListOfProducts() {
 
-        this.products.add(new Dress("dress", 6.22, "red", "long"));
+        this.products.add(new Dress("dress", 6.22, "red", "long", 42));
 
-        this.products.add(new Pants("pants", 1.33, "green", "jeans"));
+        this.products.add(new Pants("pants", 1.33, "green", "jeans",48));
 
-        this.products.add(new Dress("dress", 3.62, "red", "medium"));
+        this.products.add(new Dress("dress", 3.62, "red", "medium", 46));
 
-        this.products.add(new WhiteShirt("white short", 84.44));
+        this.products.add(new WhiteShirt("white shirt", 84.44, 44));
     }
 
     public void addProduct(Product product) {

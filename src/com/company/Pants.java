@@ -4,8 +4,8 @@ public class Pants extends Product {
     private String material;
     private String color;
 
-    public Pants(String name, double price, String color, String material) {
-        super(name, price);
+    public Pants(String name, double price, String color, String material, int size) {
+        super(name, price, size);
         this.color = color;
         this.material = material;
         this.keywords.add(color);
@@ -30,6 +30,6 @@ public class Pants extends Product {
 
     public void printProduct() {
         System.out.println("id: " + this.getId() + "; name: " + this.getName() + "; price: " + this.getPrice() +
-                "; color: " + this.getColor() + "; material: " + this.getMaterial());
+                "; color: " + this.getColor() + "; material: " + this.getMaterial() + "; size: " + this.getSize());
     }
 }

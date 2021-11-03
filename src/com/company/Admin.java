@@ -28,8 +28,10 @@ public class Admin extends Account {
                     String color = in.nextLine();
                     System.out.println("Enter the length of the dress");
                     String length = in.nextLine();
+                    System.out.println("Enter the size of the dress");
+                    int size = Integer.parseInt(in.nextLine());
 
-                    aiShop.addProduct(new Dress(name, price, color, length));
+                    aiShop.addProduct(new Dress(name, price, color, length, size));
                     over = true;
                 }
                 case 2 -> {
@@ -37,8 +39,10 @@ public class Admin extends Account {
                     String name = in.nextLine();
                     System.out.println("Enter the price of the shirt");
                     double price = Double.parseDouble(in.nextLine());
+                    System.out.println("Enter the size of the shirt");
+                    int size = Integer.parseInt(in.nextLine());
 
-                    aiShop.addProduct(new WhiteShirt(name, price));
+                    aiShop.addProduct(new WhiteShirt(name, price,size));
                     over = true;
                 }
                 case 3 -> {
@@ -50,8 +54,10 @@ public class Admin extends Account {
                     String color = in.nextLine();
                     System.out.println("Enter the material of the pants");
                     String material = in.nextLine();
+                    System.out.println("Enter the size of the pants");
+                    int size = Integer.parseInt(in.nextLine());
 
-                    aiShop.addProduct(new Pants(name, price, color, material));
+                    aiShop.addProduct(new Pants(name, price, color, material,size));
                     over = true;
                 }
                 default -> System.out.println("We have no such option. Try again");
@@ -70,7 +76,7 @@ public class Admin extends Account {
         int option;
 
         System.out.println("Choose an option: 1-change length, " +
-                "2-change color, 3-change material");
+                "2-change color, 3-change material, 4-change size");
 
         option = this.optionInput();
 
@@ -86,6 +92,10 @@ public class Admin extends Account {
             case 3 -> {
                 System.out.println("Enter new material");
                 this.actions.changeMaterial(in.nextLine());
+            }
+            case 4 -> {
+                System.out.println("Enter new size");
+                this.actions.changeSize(Integer.parseInt(in.nextLine()));
             }
 
         }

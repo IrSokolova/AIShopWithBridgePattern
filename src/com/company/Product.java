@@ -9,6 +9,7 @@ public abstract class Product {
     private final int id;
     private final String name;
     private final double price;
+    protected int size;
     protected final Set<String> keywords = new HashSet<>();
 
     /**
@@ -19,16 +20,21 @@ public abstract class Product {
         return this.keywords.contains(userKeyword);
     }
 
-    public Product(String type, double price) {
+    public Product(String type, double price, int size) {
         this.id = idIterator;
         idIterator++;
 
         this.name = type;
         this.price = price;
+        this.size = size;
 
         this.keywords.add(type);
         this.keywords.add(String.valueOf(id));
     }
+
+    public int getSize(){return this.size;}
+
+    public void setSize(int size){this.size = size;}
 
     public void printProduct() {
         System.out.println("id: " + this.getId() + "; name: " + this.getName() + "; price: " + this.getPrice());

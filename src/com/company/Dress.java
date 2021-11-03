@@ -4,8 +4,8 @@ public class Dress extends Product {
     private String color;
     private String length;
 
-    public Dress(String name, double price, String color, String length) {
-        super(name, price);
+    public Dress(String name, double price, String color, String length, int size) {
+        super(name, price,size);
         this.color = color;
         this.length = length;
         this.keywords.add(color);
@@ -30,6 +30,6 @@ public class Dress extends Product {
 
     public void printProduct() {
         System.out.println("id: " + this.getId() + "; name: " + this.getName() + "; price: " + this.getPrice() +
-                "; color: " + this.getColor() + "; length: " + this.getLength());
+                "; color: " + this.getColor() + "; length: " + this.getLength() + "; size: " + this.getSize());
     }
 }
