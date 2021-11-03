@@ -56,7 +56,7 @@ public class WhiteShirt implements Product {
 
     @Override
     public void setLength(String length) {
-
+        System.out.println("White shirt doesn't have length");
     }
 
     @Override
@@ -66,7 +66,7 @@ public class WhiteShirt implements Product {
 
     @Override
     public void setMaterial(String material) {
-
+        System.out.println("White shirt doesn't have material");
     }
 
     /**
@@ -98,6 +98,4 @@ public class WhiteShirt implements Product {
     public Set<String> getKeywords() {
         return this.keywords;
     }
-
-
 }

@@ -67,7 +67,6 @@ public class Dress implements Product {
         System.out.println("The dress doesn't have material");
     }
 
-
     public void setLength(String length) {
         this.length = length;
     }

@@ -58,7 +58,6 @@ public class Pants implements Product {
         System.out.println("The pants don't have length");
     }
 
-
     public void setColor(String color) {
         this.color = color;
     }

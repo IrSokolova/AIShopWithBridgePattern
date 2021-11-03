@@ -5,7 +5,7 @@ import java.util.*;
 public class User extends Account {
     Scanner in = new Scanner(System.in);
 
-    private final List<Product> cart = new ArrayList<>();// корзина
+    private final List<Product> cart = new ArrayList<>();
 
     private final Set<String> searchHistory = new HashSet<>();
 

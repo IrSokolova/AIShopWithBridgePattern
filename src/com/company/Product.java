@@ -10,8 +10,6 @@ public interface Product {
      */
     boolean isApplicable(String userKeyword);
 
-
-
     int getSize();
 
     void setSize(int size);
