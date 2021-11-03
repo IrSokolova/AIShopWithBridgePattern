@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class Admin extends Account {
     Scanner in = new Scanner(System.in);
     Actions actions;
+    static int currentID;
 
     public Admin(String login, String password) {
         super(login, password);
+        currentID = 4;
     }
 
     private void addProduct(AIShop aiShop) {
@@ -20,8 +22,6 @@ public class Admin extends Account {
             option = this.optionInput();
             switch (option) {
                 case 1 -> {
-                    System.out.println("Enter the name of the dress");
-                    String name = in.nextLine();
                     System.out.println("Enter the price of the dress");
                     double price = Double.parseDouble(in.nextLine());
                     System.out.println("Enter the color of the dress");
@@ -31,23 +31,21 @@ public class Admin extends Account {
                     System.out.println("Enter the size of the dress");
                     int size = Integer.parseInt(in.nextLine());
 
-                    aiShop.addProduct(new Dress(name, price, color, length, size));
+                    aiShop.addProduct(new Dress(price, color, length, size, currentID));
+                    currentID++;
                     over = true;
                 }
                 case 2 -> {
-                    System.out.println("Enter the name of the shirt");
-                    String name = in.nextLine();
                     System.out.println("Enter the price of the shirt");
                     double price = Double.parseDouble(in.nextLine());
                     System.out.println("Enter the size of the shirt");
                     int size = Integer.parseInt(in.nextLine());
 
-                    aiShop.addProduct(new WhiteShirt(name, price,size));
+                    aiShop.addProduct(new WhiteShirt(price, size, currentID));
+                    currentID++;
                     over = true;
                 }
                 case 3 -> {
-                    System.out.println("Enter the name of the pants");
-                    String name = in.nextLine();
                     System.out.println("Enter the price of the pants");
                     double price = Double.parseDouble(in.nextLine());
                     System.out.println("Enter the color of the pants");
@@ -57,7 +55,8 @@ public class Admin extends Account {
                     System.out.println("Enter the size of the pants");
                     int size = Integer.parseInt(in.nextLine());
 
-                    aiShop.addProduct(new Pants(name, price, color, material,size));
+                    aiShop.addProduct(new Pants(price, color, material, size, currentID));
+                    currentID++;
                     over = true;
                 }
                 default -> System.out.println("We have no such option. Try again");
@@ -70,8 +69,6 @@ public class Admin extends Account {
 
         int id = this.inputID();
         this.actions = new Actions(aiShop.findProductByID(id));
-
-//        this.actions.setProduct();
 
         int option;
 

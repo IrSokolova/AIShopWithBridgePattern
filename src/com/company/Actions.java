@@ -8,28 +8,26 @@ public class Actions {
     }
 
     void changeLength(String length) {
+        this.product.getKeywords().remove(this.product.getLength());
+        this.product.setLength(length);
         if (this.product instanceof Dress) {
-            ((Dress) product).setLength(length);
-        } else {
-            System.out.println("The length cannot be changed");
+            this.product.getKeywords().add(length);
         }
     }
 
     void changeMaterial(String material) {
+        this.product.getKeywords().remove(this.product.getMaterial());
+        this.product.setMaterial(material);
         if (this.product instanceof Pants) {
-            ((Pants) product).setMaterial(material);
-        } else {
-            System.out.println("The material cannot be changed");
+            this.product.getKeywords().add(material);
         }
     }
 
     void changeColor(String color) {
-        if (this.product instanceof Pants) {
-            ((Pants) product).setColor(color);
-        } else if (this.product instanceof Dress) {
-            ((Dress) product).setColor(color);
-        } else {
-            System.out.println("The color cannot be changed");
+        this.product.getKeywords().remove(this.product.getColor());
+        this.product.setColor(color);
+        if (this.product instanceof Pants || this.product instanceof Dress) {
+            this.product.getKeywords().add(color);
         }
     }
 
@@ -41,5 +39,6 @@ public class Actions {
         return product;
     }
 
-    public void setProduct(Product product){this.product = product;}
+    public void setProduct(Product product){
+        this.product = product;}
 }
