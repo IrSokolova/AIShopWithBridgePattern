@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Changing implements Strategy{
-    private Admin admin;
+    private final Admin admin;
     private final Scanner in = new Scanner(System.in);
 
     public Changing(Admin admin) {

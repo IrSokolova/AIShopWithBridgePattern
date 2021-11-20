@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 
 public class Adding implements Strategy{
-    private Admin admin;
+    private final Admin admin;
     private final Scanner in = new Scanner(System.in);
 
     public Adding(Admin admin) {
