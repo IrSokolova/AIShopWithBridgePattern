@@ -1,7 +1,6 @@
 package com.company;
 
 public class Admin extends Account {
-    Actions actions;
     static int currentID;
     private Strategy strategy;
 
